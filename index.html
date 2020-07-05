@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="kansou.css">
+  <title>感想自動作成フォーム</title>
+</head>
+
+<body>
+  <h1>質問に答えて、感想をつくる</h1>
+  <p>1.あなたの名前は？ (ハンドルネームをどうぞ)</p>
+  <div id=setume>匿名で送る場合。１を空欄に、選択肢を匿名で送るにしてください。<br>他の空欄は全てうめる必要があります。</div>
+  <input type="text" id="user-name" size="40" maxlength="30">
+  <select id=tokumei>
+    <option value="と申します。">名前を添えて送る</option>
+    <option value="">匿名で送る</option>
+  </select>
+  <p>2.感想を送る相手は？（敬称略）</p>
+  <input type="text" id="dear-name" size="40" maxlength="30" autocomplete="off">
+  <p>3.その相手に感想を送るのは初めて？　初めてではない？</p>
+  <select id=hajimete>
+    <option value="初めまして、突然のメッセージ失礼します。">初めて</option>
+    <option value="こんにちは、いつも楽しく作品拝見しております。">初めてではない</option>
+  </select>
+  <p>4.感想を送りたい同人誌、または作品の名前は？</p>
+  <input type="text" id="sakuhin-name" size="40" maxlength="50" autocomplete="off">
+  <p>5.作品を読み終えて、一番に感じたことは？</p>
+  <select id=kanjyou>
+    <option value="日々の疲れを忘れてしまうほど癒されました。">癒された</option>
+    <option value="胸がジーンと暖かくなり、幸せな気持ちになりました。">穏やかな気持ちになった</option>
+    <option value="面白さのあまり、時間を忘れて夢中で読んでしまいました。">楽しかった</option>
+    <option value="読み終わった瞬間に深呼吸をしてしまうぐらい、話にひきこまれました。">ハッピーエンドで安心した</option>
+    <option value="胸がいっぱいです。私にとっては、宝物のようなお話です。">大好きな話だった</option>
+    <option value="こらえきれずに、思わず涙がこぼれました。">悲しかった</option>
+    <option value="想像もつかない話の展開に驚かされました。">驚いた</option>
+  </select>
+  <p>6.特に、どのページ。もしくは、どのシーンが良かった？</p>
+  <div id=setume>ページを選択した場合『１，２などの数字』を。シーンを選択した場合『二人のキス』など、シーンに続いておかしくない形で入力を</div>
+  <input type="text" id="page-name" size="40" maxlength="300" autocomplete="off"><select id=page>
+    <option value="ページ。">ページ</option>
+    <option value="シーン。">シーン</option>
+  </select>
+  <p>7.一つ前の質問で上げたページ、シーンのどこが良かった？</p>
+  <div id=setume>例文：二人が互いに思いあっている様子が痛いほど伝わってきました。</div>
+  <textarea id="kanso" placeholder="一度消えてしまうと元に戻りませんので、長文の場合は各自バックアップを" maxlength="30000" rows="5" cols="40"></textarea>
+  <p>８.返信は？</p>
+  <select id=henshin>
+    <option value="">必要</option>
+    <option value="返信、どうぞお気遣いなく。">不要もしくは、どちらでも</option>
+  </select>
+  <br>
+  <br>
+  <button id="assessment">制作する</button>
+  <div id="result-area"></div>
+  <br>
+  <div id="tyuui">
+    <ul>
+      <li>誤字対応は出来ますが、その他の要望は技術的に難しいため各自お願いします。</li>
+      <li>データは取っておりませんので、ページを離れると消えます。うまく感想が制作できず消えてしまう可能性もあるので、長文を書いた場合、各自でバックアップお願いします。</li>
+      <li>データは取っておりませんので悪用の可能性は低いと思いますが、こちらの使用により、何かしらの不利益を被っても責任は取れません。</li>
+      <li>明らかな商用利用は禁止です。</li>
+    </ul>
+  </div>
+  <script src="kansou.js"></script>
+</body>
+
+</html>
