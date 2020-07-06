@@ -1,7 +1,8 @@
 body {
     background-color: #3399FF;
     color: #FDFFFF;
-    width: 500px;
+    width: 98vw;
+    max-width: 500px;
     margin-right: auto;
     margin-left : auto;
   }
